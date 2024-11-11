@@ -5,35 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Leang - Personal Website</title>
     <style>
+        /* Basic styles for the layout and container */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
             background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            color: #333;
         }
         header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
         }
-        h1, h2, h3 {
-            color: #444;
+        header h1 {
+            margin: 0;
         }
-        a {
-            color: #007acc;
+
+        /* Navigation menu styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
             text-decoration: none;
+            cursor: pointer;
         }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styling */
         .section {
-            margin-bottom: 20px;
-            padding: 15px;
+            display: none; /* Hide all sections initially */
+            padding: 20px;
+            margin: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        .active {
+            display: block; /* Display only the active section */
         }
         .download-resume {
             text-align: center;
@@ -49,29 +66,79 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Andrea Leang</h1>
-            <p>Cambridge, MA 02139 | <a href="mailto:akleang@mit.edu">akleang@mit.edu</a> | 
-               <a href="https://linkedin.com/in/andrea-leang/" target="_blank">LinkedIn</a>
-            </p>
-        </header>
 
-        <!-- Download Resume Section -->
-        <div class="download-resume">
-            <a href="2024 Andrea Leang's Resume.pdf" download>Download My Resume</a>
-        </div>
-        
-        <!-- Other sections... -->
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Massachusetts Institute of Technology</strong>, Cambridge, MA</p>
-            <p>Anticipated MEng. Candidate in Electrical Engineering and Computer Science (May 2026)</p>
-            <p>Candidate for S.B. in Electrical Engineering and Computer Science (May 2025), Minor in Business Analytics. GPA: 4.8/5.0</p>
-            <p><strong>Relevant Coursework:</strong> Nanoelectronics & Computation Systems, Micro/Nanofabrication, Robotic Manipulation, and more.</p>
+    <header>
+        <h1>Andrea Leang</h1>
+        <p>Cambridge, MA 02139 | <a href="mailto:akleang@mit.edu" style="color: #fff;">akleang@mit.edu</a> | 
+           <a href="https://linkedin.com/in/andrea-leang/" target="_blank" style="color: #fff;">LinkedIn</a>
+        </p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('research')">Research</a>
+        <a onclick="showSection('experience')">Experience</a>
+        <a onclick="showSection('media')">Media</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h2>Home</h2>
+            <p>Welcome to my personal website! I’m Andrea Leang, an MEng. candidate at MIT specializing in Electrical Engineering and Computer Science, with a passion for innovative research and hands-on experience in electronic textile systems, robotics, and data analysis.</p>
+            <div class="download-resume">
+                <a href="Andrea_Leang_Resume.pdf" download>Download My Resume</a>
+            </div>
         </section>
-        
-        <!-- Continue with other sections... -->
+
+        <!-- Research Section -->
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <p><strong>Networked Electronic Textile Skin for VR/AR</strong> (MIT Media Lab) - Developed a 3D digital twin of fabric sensors for real-time position tracking and robotic control, enhancing VR/AR experiences.</p>
+            <p><strong>Towards Microbial-Arduino Study</strong> (MIT LEMI) - Automated analysis of bacterial videos using MATLAB and machine learning clustering techniques to assess surface charge characteristics.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2>Past Experience</h2>
+            <p><strong>Fencing Star U.S. Distribution</strong> - Directed collaboration with fencing clubs, generating over $50,000 in revenue. Created and managed an e-commerce site to streamline sales and outreach.</p>
+            <p><strong>Teaching Assistant for Mathematics for Computer Science</strong> - Supported 600+ students in developing proof-writing skills through recitations and office hours.</p>
+            <p><strong>MIT Varsity Fencing Team</strong> - Led the Women’s Epee Squad, organizing practices and representing MIT in NCAA competitions.</p>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media" class="section">
+            <h2>Media</h2>
+            <p>Explore photos, articles, and media related to my projects and extracurricular activities.</p>
+            <ul>
+                <li>Article: “Zeta potential characterization using commercial microfluidic chips” - Coauthor (Jan. 2024)</li>
+                <li>Publication: “Comparison of point-tracking algorithms in ultrasound videos from the upper limb” - Acknowledgment (May 2023)</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>If you’d like to reach out, feel free to contact me via email or LinkedIn:</p>
+            <p>Email: <a href="mailto:akleang@mit.edu">akleang@mit.edu</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/andrea-leang/" target="_blank">linkedin.com/in/andrea-leang</a></p>
+        </section>
+
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
