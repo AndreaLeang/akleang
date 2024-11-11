@@ -1,11 +1,13 @@
 /* Global Styles */
+/* Apply Menlo font to the entire body */
 body {
-    font-family: "Noto Sans Mono", sans-serif;
+    font-family: 'Menlo', 'Courier', 'Monaco', monospace;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
+
 
 .container {
     padding: 20px;
