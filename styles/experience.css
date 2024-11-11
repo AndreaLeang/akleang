@@ -5,22 +5,3 @@ section#experience {
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
-
-/* Container for the sub-sections */
-.sub-sections {
-    display: block; /* Stacks the subsections vertically */
-}
-
-/* Styling for each individual subsection block */
-.sub-section {
-    margin-bottom: 30px; /* Adds space between blocks */
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Additional optional styling for headers within subsections */
-.sub-section h3 {
-    margin-top: 0;
-}
