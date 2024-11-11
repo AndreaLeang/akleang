@@ -4,56 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea Leang - Personal Website</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!-- Default main styles -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Andrea Leang</h1>
-        <p>Cambridge, MA 02139 | <a href="mailto:akleang@mit.edu" style="color: #fff;">akleang@mit.edu</a> | 
-           <a href="https://linkedin.com/in/andrea-leang/" target="_blank" style="color: #fff;">LinkedIn</a>
-        </p>
-    </header>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="javascript:void(0);" onclick="loadSection('home')">Home</a>
-        <a href="javascript:void(0);" onclick="loadSection('research')">Research</a>
-        <a href="javascript:void(0);" onclick="loadSection('experience')">Experience</a>
-        <a href="javascript:void(0);" onclick="loadSection('media')">Media</a>
-        <a href="javascript:void(0);" onclick="loadSection('contact')">Contact</a>
-    </nav>
+    <!-- This is where the header (with menu) will be inserted -->
+    <div id="header-placeholder"></div>
 
     <div class="container">
-        <!-- Content will be loaded dynamically here -->
-        <div id="content-area">
-            <h2>Welcome!</h2>
-            <p>Click on the menu items to load different sections.</p>
-        </div>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to my personal website! I’m Andrea Leang, an MEng. candidate at MIT specializing in Electrical Engineering and Computer Science, with a passion for innovative research and hands-on experience in electronic textile systems, robotics, and data analysis.</p>
+            <div class="download-resume">
+                <a href="Andrea_Leang_Resume.pdf" download>Download My Resume</a>
+            </div>
+        </section>
     </div>
 
     <script>
-        function loadSection(section) {
-            // Fetch and load the content of the clicked section dynamically
-            const contentArea = document.getElementById("content-area");
-
-            // Fetch the corresponding section HTML file from the 'sections' folder
-            fetch("sections/" + section + ".html")
-                .then(response => response.text())
-                .then(data => {
-                    contentArea.innerHTML = data;
-                    // Dynamically load the associated CSS from the 'styles' folder
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = 'styles/' + section + ".css"; // Add the CSS specific to the section
-                    document.head.appendChild(link);
-                })
-                .catch(err => {
-                    contentArea.innerHTML = `<p>Error loading the section.</p>`;
-                    console.error(err);
-                });
-        }
+        // JavaScript to load header.html (including the navigation menu) into the placeholder
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
     </script>
-
 </body>
 </html>

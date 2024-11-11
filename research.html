@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Andrea Leang</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- This is where the header (with menu) will be inserted -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <section id="research">
+            <h2>Research</h2>
+            <p><strong>Networked Electronic Textile Skin for VR/AR</strong> (MIT Media Lab) - Developed a 3D digital twin of fabric sensors for real-time position tracking and robotic control, enhancing VR/AR experiences.</p>
+            <p><strong>Towards Microbial-Arduino Study</strong> (MIT LEMI) - Automated analysis of bacterial videos using MATLAB and machine learning clustering techniques to assess surface charge characteristics.</p>
+
+            <!-- Subsection for Research Experience -->
+            <div class="subsection">
+                <h3>Research Experience</h3>
+                <ul>
+                    <li><strong>MIT Media Lab (2023-2024)</strong>: Lead development of an electronic textile skin for virtual environments, integrating machine learning algorithms for position tracking.</li>
+                    <li><strong>MIT LEMI (2022-2023)</strong>: Contributed to a microbial study, focusing on analysis of bacterial surface charge using MATLAB and machine learning techniques.</li>
+                </ul>
+            </div>
+
+            <!-- Subsection for Publications -->
+            <div class="subsection">
+                <h3>Publications</h3>
+                <ul>
+                    <li><a href="#">Zeta potential characterization using commercial microfluidic chips - Coauthor (Jan. 2024)</a></li>
+                    <li><a href="#">Comparison of point-tracking algorithms in ultrasound videos from the upper limb - Acknowledgment (May 2023)</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to load header.html (including the navigation menu) into the placeholder
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

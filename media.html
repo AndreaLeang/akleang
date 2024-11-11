@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Andrea Leang</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- This is where the header (with menu) will be inserted -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <section id="media">
+            <h2>Media</h2>
+            <p>Explore photos, videos, and articles related to my projects and extracurricular activities.</p>
+
+            <!-- Subsection for Articles -->
+            <div class="subsection">
+                <h3>Articles & Publications</h3>
+                <ul>
+                    <li><a href="#">Article: “Zeta potential characterization using commercial microfluidic chips” - Coauthor (Jan. 2024)</a></li>
+                    <li><a href="#">Publication: “Comparison of point-tracking algorithms in ultrasound videos from the upper limb” - Acknowledgment (May 2023)</a></li>
+                </ul>
+            </div>
+
+            <!-- Subsection for Media Content (Images and Videos) -->
+            <div class="subsection media-content">
+                <h3>Media Gallery</h3>
+                <!-- Example Image -->
+                <img src="path/to/your/image.jpg" alt="Project Image">
+
+                <!-- Example Video -->
+                <video controls>
+                    <source src="path/to/your/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to load header.html (including the navigation menu) into the placeholder
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

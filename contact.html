@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Andrea Leang</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- This is where the header (with menu) will be inserted -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you’d like to reach out, feel free to contact me via email or LinkedIn:</p>
+
+            <!-- Contact Information Subsection -->
+            <div class="subsection">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:akleang@mit.edu">akleang@mit.edu</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/andrea-leang/" target="_blank">linkedin.com/in/andrea-leang</a></p>
+            </div>
+
+            <!-- Contact Form Subsection -->
+            <div class="subsection">
+                <h3>Get In Touch</h3>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to load header.html (including the navigation menu) into the placeholder
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

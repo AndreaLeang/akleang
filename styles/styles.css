@@ -1,4 +1,4 @@
-/* Basic styles for the layout and container */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,69 +6,93 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+
+.container {
+    padding: 20px;
+}
+
+/* Header Styling */
 header {
     background-color: #007acc;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
 }
 
-/* Navigation menu styles */
+header p {
+    margin: 5px 0;
+}
+
+/* Navigation Styling */
 nav {
     display: flex;
     justify-content: center;
     background-color: #444;
     padding: 10px;
 }
+
 nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
-    cursor: pointer;
 }
+
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Section styling */
-.section {
-    display: none; /* Hide all sections initially */
+/* Styling for Subsection Blocks */
+.subsection {
+    margin: 20px 0;
     padding: 20px;
-    margin: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
-.active {
-    display: block; /* Display only the active section */
-}
 
-/* Sub-section style to divide the content */
-.sub-sections {
+/* Media - Images and Videos Styling */
+.media-content {
     display: flex;
-    gap: 30px; /* Adds space between blocks */
-    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
-}
-.sub-section {
-    flex: 1; /* Makes each block take equal space */
-    min-width: 250px; /* Ensures they don't get too small */
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 20px;
 }
 
+.media-content img, .media-content video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.media-content video {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+/* Download Resume Button */
 .download-resume {
     text-align: center;
     margin: 20px 0;
 }
+
 .download-resume a {
     background-color: #007acc;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.download-resume a:hover {
+    background-color: #005f8a;
+}
+
+/* Responsive Design for Media Content */
+@media (max-width: 768px) {
+    .media-content {
+        padding: 10px;
+    }
 }

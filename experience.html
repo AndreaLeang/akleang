@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Andrea Leang</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- This is where the header (with menu) will be inserted -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <section id="experience">
+            <h2>Past Experience</h2>
+            <p><strong>Fencing Star U.S. Distribution</strong> - Directed collaboration with fencing clubs, generating over $50,000 in revenue. Created and managed an e-commerce site to streamline sales and outreach.</p>
+            <p><strong>Teaching Assistant for Mathematics for Computer Science</strong> - Supported 600+ students in developing proof-writing skills through recitations and office hours.</p>
+            <p><strong>MIT Varsity Fencing Team</strong> - Led the Women’s Epee Squad, organizing practices and representing MIT in NCAA competitions.</p>
+
+            <!-- Subsection for Work Experience -->
+            <div class="subsection">
+                <h3>Work Experience</h3>
+                <ul>
+                    <li><strong>Fencing Star U.S. Distribution</strong>: Directed an e-commerce site, sales outreach, and partnerships with fencing clubs to increase revenue.</li>
+                    <li><strong>Teaching Assistant - MIT</strong>: Supported large student groups in a high-demand math course, conducting recitations and one-on-one tutoring.</li>
+                    <li><strong>MIT Varsity Fencing Team</strong>: Organized team practices, represented MIT at NCAA competitions, and mentored younger athletes.</li>
+                </ul>
+            </div>
+
+            <!-- Subsection for Leadership and Extracurriculars -->
+            <div class="subsection">
+                <h3>Leadership & Extracurriculars</h3>
+                <p><strong>MIT Varsity Fencing Team</strong>: Captain of Women’s Epee Squad, responsible for organizing practices and competitions.</p>
+                <p><strong>Student Organizations</strong>: Active participation in MIT’s electrical engineering and robotics clubs.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to load header.html (including the navigation menu) into the placeholder
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>
