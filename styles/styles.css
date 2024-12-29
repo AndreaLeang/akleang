@@ -47,6 +47,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.active {
+    background-color: #04AA6D;
+  }
+
 .menu-link {
     text-decoration: none;
     padding: 10px 15px;
