@@ -24,13 +24,33 @@
         </section>
     </div>
 
-    <script>
+    <!-- <script>
         // JavaScript to load header.html (including the navigation menu) into the placeholder
         fetch('includes/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById("header-placeholder").innerHTML = data;
             });
+    </script> -->
+    <script>
+        // Get the current page's filename
+        const currentPage = window.location.pathname.split('/').pop();
+    
+        // Map pages to their respective menu-link IDs
+        const pageMap = {
+            "index.html": "home-link",
+            "research.html": "research-link",
+            "experience.html": "experience-link",
+            "media.html": "media-link",
+            "contact.html": "contact-link"
+        };
+    
+        // Add the active class to the current page's menu link
+        const activeLinkId = pageMap[currentPage];
+        if (activeLinkId) {
+            document.getElementById(activeLinkId).classList.add('active');
+        }
     </script>
+    
 </body>
 </html>
