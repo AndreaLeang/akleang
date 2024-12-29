@@ -47,9 +47,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.active {
+nav a:active {
     background-color: #04AA6D;
-  }
+}
+/* .active {
+    background-color: #04AA6D;
+  } */
 
 .menu-link {
     text-decoration: none;
