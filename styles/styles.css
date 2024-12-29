@@ -1,85 +1,120 @@
-/* General styles */
+/* Global Styles */
+/* Apply Menlo font to the entire body */
 body {
-    font-family: 'Menlo', monospace;
+    font-family: 'Menlo', 'Courier', 'Monaco', monospace;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
+
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styles */
-.header {
+/* Header Styling */
+header {
     background-color: #007acc;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.header h1 {
+header h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 
-.header p {
-    margin: 5px 0 15px;
-    font-size: 1em;
+header p {
+    margin: 5px 0;
 }
 
-.header a {
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav a {
     color: #fff;
+    margin: 0 15px;
     text-decoration: none;
 }
 
-/* Menu styles */
-.menu {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    background-color: #004a80;
-    margin: 0;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.menu li {
-    margin: 0 15px;
+nav a:hover {
+    text-decoration: underline;
 }
 
 .menu-link {
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1em;
-    color: #fff;
-    border: 2px solid transparent;
+    color: #007acc;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .menu-link:hover {
-    background-color: #005f9f;
+    background-color: #007acc;
+    color: #fff;
+}
+
+.menu-link.active {
+    background-color: #007acc;
     color: #fff;
     border: 2px solid #fff;
 }
 
-.menu-link.active {
-    background-color: #fff;
-    color: #007acc;
-    font-weight: bold;
-    border: 2px solid #007acc;
+
+/* Styling for Subsection Blocks */
+.subsection {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Media - Images and Videos Styling */
+.media-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.media-content img, .media-content video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.media-content video {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+/* Download Resume Button */
+.download-resume {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download-resume a {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.download-resume a:hover {
+    background-color: #005f8a;
+}
+
+/* Responsive Design for Media Content */
+@media (max-width: 768px) {
+    .media-content {
+        padding: 10px;
+    }
 }
