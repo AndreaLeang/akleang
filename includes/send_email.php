@@ -1,7 +1,7 @@
 <?php 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Email to receive submissions
-    $to = "abc@example.com";
+    $to = "akleang@mit.edu";
     
     // Sanitize and validate form inputs
     $first_name = htmlspecialchars(strip_tags(trim($_POST['first_name'])));
