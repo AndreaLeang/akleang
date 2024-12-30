@@ -1,5 +1,6 @@
 <?php 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    echo "Form submitted successfully!";
     // Email to receive submissions
     $to = "akleang@mit.edu";
     
@@ -31,5 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         echo "There was an error sending your message. Please try again later.";
     }
+} else {
+    echo "Request method is: " . $_SERVER["REQUEST_METHOD"];
 }
 ?>
