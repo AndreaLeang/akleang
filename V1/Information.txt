@@ -1,0 +1,5 @@
+>Welcome to my personal website! I’m Andrea Leang, an MEng. candidate at MIT 
+specializing in Electrical Engineering and Computer Science, 
+with a passion for innovative research and hands-on experience in
+nanotechnology, learning algorithms, and digital twins.
+
