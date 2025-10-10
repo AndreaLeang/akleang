@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Modern React portfolio website for Andrea Leang",
   "private": true,
-  "homepage": "https://akleang.github.io/akleang",
+  "homepage": "https://andrealeang.github.io/akleang",
   "dependencies": {
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
