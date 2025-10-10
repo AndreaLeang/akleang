@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/akleang/static/css/main.0824f115.css",
+    "main.js": "/akleang/static/js/main.2e775d22.js",
+    "index.html": "/akleang/index.html",
+    "main.0824f115.css.map": "/akleang/static/css/main.0824f115.css.map",
+    "main.2e775d22.js.map": "/akleang/static/js/main.2e775d22.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0824f115.css",
+    "static/js/main.2e775d22.js"
+  ]
+}
