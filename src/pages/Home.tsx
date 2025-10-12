@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaDownload } from 'react-icons/fa';
+// import { FaDownload } from 'react-icons/fa';
 
 const HomeContainer = styled.div`
   min-height: calc(100vh - 200px);
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <FaDownload />
+          {/* <FaDownload /> */}
           Download My Resume
         </DownloadButton>
       </Content>
