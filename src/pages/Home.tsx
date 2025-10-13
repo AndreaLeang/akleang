@@ -98,9 +98,9 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          I'm Andrea Leang, specializing in Electrical Engineering and Computer Science, 
+          I'm Andrea Leang, majoring in Electrical Engineering and Computer Science, 
           with a passion for innovative research and hands-on experience in nanotechnology, 
-          learning algorithms, and digital twins.
+          learning algorithms, and overall, digital twins.
         </Description>
         
         <DownloadButton

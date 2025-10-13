@@ -133,7 +133,7 @@ const Research: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Focused in machine learning and data analytics in robotics, VR/AR, biotechnology, and biomechanics.
+          Current research in partnership with IBM: CPU and GPU-CPU Modeling in the context of large LLM inference, focused on latency and energy in KV Cache and Model Parameter offloading and scheduling
         </Subtitle>
 
         <Subsection
@@ -176,14 +176,27 @@ const Research: React.FC = () => {
           </PublicationList>
         </Subsection>
 
+        <Subtitle
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Past research focused in machine learning and data analytics in robotics, VR/AR, biotechnology, and biomechanics.
+        </Subtitle>
+
         <Subsection
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <SubsectionTitle>
-            {/* <FaGraduationCap /> */}
-            Research Experience
+            <PublicationTitle
+              href="https://docs.google.com/presentation/d/1d7Qra6YD2JJIQYHkSVG0ghMygJf6ifC8YJQv7Qt4lSM/edit?usp=sharing"
+              target="_blank" 
+              rel="noopener noreferrer">
+              Research Experience
+            </PublicationTitle>
+            
           </SubsectionTitle>
           <ExperienceList>
             <ExperienceItem>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 // import { FaFileAlt, FaImage, FaVideo, FaExternalLinkAlt } from 'react-icons/fa';
 
-const MediaContainer = styled.div`
+const ProjectsContainer = styled.div`
   padding: 60px 0;
 `;
 
@@ -115,10 +115,6 @@ const MediaPlaceholder = styled.div`
   }
 `;
 
-const MediaIcon = styled.div`
-  font-size: 2rem;
-  opacity: 0.5;
-`;
 
 const ComingSoon = styled.div`
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -129,16 +125,16 @@ const ComingSoon = styled.div`
   margin: 20px 0;
 `;
 
-const Media: React.FC = () => {
+const Projects: React.FC = () => {
   return (
-    <MediaContainer>
+    <ProjectsContainer>
       <Section>
         <Title
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Media
+          Projects
         </Title>
         
         <Subtitle
@@ -195,7 +191,6 @@ const Media: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <SubsectionTitle>
-            {/* <FaImage /> */}
             Media Gallery
           </SubsectionTitle>
           
@@ -206,9 +201,6 @@ const Media: React.FC = () => {
           
           <MediaGallery>
             <MediaPlaceholder>
-              <MediaIcon>
-                {/* <FaImage /> */}
-              </MediaIcon>
               <div>
                 <strong>Project Images</strong>
                 <p>Photos from research projects and experiments</p>
@@ -216,9 +208,6 @@ const Media: React.FC = () => {
             </MediaPlaceholder>
             
             <MediaPlaceholder>
-              <MediaIcon>
-                {/* <FaVideo /> */}
-              </MediaIcon>
               <div>
                 <strong>Demo Videos</strong>
                 <p>Interactive demonstrations and project showcases</p>
@@ -226,9 +215,6 @@ const Media: React.FC = () => {
             </MediaPlaceholder>
             
             <MediaPlaceholder>
-              <MediaIcon>
-                {/* <FaFileAlt /> */}
-              </MediaIcon>
               <div>
                 <strong>Technical Documentation</strong>
                 <p>Detailed project documentation and reports</p>
@@ -237,9 +223,9 @@ const Media: React.FC = () => {
           </MediaGallery>
         </Subsection>
       </Section>
-    </MediaContainer>
+    </ProjectsContainer>
   );
 };
 
-export default Media;
+export default Projects;
 
