@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-// import { FaFileAlt, FaImage, FaVideo, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectsContainer = styled.div`
   padding: 60px 0;
@@ -125,6 +124,41 @@ const ComingSoon = styled.div`
   margin: 20px 0;
 `;
 
+
+const ExperienceList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const ExperienceItem = styled.li`
+  margin-bottom: 25px;
+  padding: 20px;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+`;
+
+const ExperienceTitle = styled.h4`
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+`;
+
+const ExperienceDescription = styled.p`
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+`;
+
+const ExperienceBullet = styled.p`
+  padding-left: 20px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+`;
+
+
 const Projects: React.FC = () => {
   return (
     <ProjectsContainer>
@@ -142,47 +176,31 @@ const Projects: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Explore photos, videos, and articles related to my projects and extracurricular activities.
+          Class and Personal Projects
         </Subtitle>
 
         <Subsection
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
           <SubsectionTitle>
-            {/* <FaFileAlt /> */}
-            Articles & Publications
-          </SubsectionTitle>
-          <PublicationList>
-            <PublicationItem>
-              <PublicationTitle 
-                href="https://doi.org/10.1039/d3lc00825h" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                "Zeta potential characterization using commercial microfluidic chips" - Coauthor (Jan. 2024)
-                {/* <FaExternalLinkAlt size={12} /> */}
-              </PublicationTitle>
-              <PublicationDetails>
-                Published in Lab on a Chip journal, contributing to automated analysis of bacterial videos using MATLAB and Machine Learning clustering techniques.
-              </PublicationDetails>
-            </PublicationItem>
+            Class Projects
             
-            <PublicationItem>
-              <PublicationTitle 
-                href="https://doi.org/10.1186/s12938-023-01105-y" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                "Comparison of point-tracking algorithms in ultrasound videos from the upper limb" - Acknowledgment (May 2023)
-                {/* <FaExternalLinkAlt size={12} /> */}
-              </PublicationTitle>
-              <PublicationDetails>
-                Acknowledged for contributions to point-tracking algorithm research in biomedical engineering.
-              </PublicationDetails>
-            </PublicationItem>
-          </PublicationList>
+          </SubsectionTitle>
+          <ExperienceList>
+            <ExperienceItem>
+              <ExperienceTitle>Robotic Manipulation</ExperienceTitle>
+              <ExperienceDescription>
+              Project Name
+              </ExperienceDescription>
+              <ExperienceBullet>
+              - Project Description
+              </ExperienceBullet>
+            </ExperienceItem>
+
+            
+          </ExperienceList>
         </Subsection>
 
         <Subsection

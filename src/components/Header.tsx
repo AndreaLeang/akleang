@@ -129,7 +129,7 @@ const Header: React.FC = () => {
     { path: '/', label: 'Home' },
     { path: '/research', label: 'Research' },
     { path: '/experience', label: 'Experience' },
-    { path: '/media', label: 'Media' },
+    { path: '/projects', label: 'Projects' },
     { path: '/contact', label: 'Contact' }
   ];
 
@@ -195,4 +195,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
