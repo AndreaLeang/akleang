@@ -84,7 +84,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Andrea Leang - [akleang@mit.edu](mailto:akleang@mit.edu)
 
-Project Link: [https://github.com/akleang/akleang](https://github.com/akleang/akleang)
+Project Link: [https://andrealeang.github.io/akleang](https://andrealeang.github.io/akleang)
 
 ---
 
