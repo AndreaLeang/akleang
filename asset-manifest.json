@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/akleang/static/css/main.0824f115.css",
-    "main.js": "/akleang/static/js/main.640f9a75.js",
+    "main.js": "/akleang/static/js/main.9847c80c.js",
     "index.html": "/akleang/index.html",
     "main.0824f115.css.map": "/akleang/static/css/main.0824f115.css.map",
-    "main.640f9a75.js.map": "/akleang/static/js/main.640f9a75.js.map"
+    "main.9847c80c.js.map": "/akleang/static/js/main.9847c80c.js.map"
   },
   "entrypoints": [
     "static/css/main.0824f115.css",
-    "static/js/main.640f9a75.js"
+    "static/js/main.9847c80c.js"
   ]
 }
