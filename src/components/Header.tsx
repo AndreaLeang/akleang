@@ -150,7 +150,7 @@ const Header: React.FC = () => {
         
         <ContactInfo>
           <span>Cambridge, MA 02139</span>
-          <a href="mailto:akleang@mit.edu">akleang@mit.edu</a>
+          <a href="mailto:andrealeang@gmail.com">andrealeang@gmail.com</a>
           <a href="https://linkedin.com/in/andrea-leang/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>

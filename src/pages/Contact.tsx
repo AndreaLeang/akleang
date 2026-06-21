@@ -228,7 +228,7 @@ const Contact: React.FC = () => {
       // Create mailto link for GitHub Pages compatibility
       const subject = `Contact from ${formData.firstName} ${formData.lastName}`;
       const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-      const mailtoLink = `mailto:akleang@mit.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:andrealeang@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       // Open email client
       window.location.href = mailtoLink;
@@ -284,7 +284,7 @@ const Contact: React.FC = () => {
             Contact Information
           </SubsectionTitle>
           <ContactInfo>
-            <ContactItem href="mailto:akleang@mit.edu">
+            <ContactItem href="mailto:andrealeang@gmail.com">
               <ContactIcon>
                 <FaEnvelope />
               </ContactIcon>
