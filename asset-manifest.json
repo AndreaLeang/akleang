@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/akleang/static/css/main.0824f115.css",
-    "main.js": "/akleang/static/js/main.59430554.js",
+    "main.js": "/akleang/static/js/main.4c715c1c.js",
+    "static/media/Andrea_Leang_Resume.pdf": "/akleang/static/media/Andrea_Leang_Resume.a239ea1ce442244b5ec4.pdf",
+    "static/media/Fencing_Star_Logo.png": "/akleang/static/media/Fencing_Star_Logo.12c3cc0ac8597d8620aa.png",
     "index.html": "/akleang/index.html",
     "main.0824f115.css.map": "/akleang/static/css/main.0824f115.css.map",
-    "main.59430554.js.map": "/akleang/static/js/main.59430554.js.map"
+    "main.4c715c1c.js.map": "/akleang/static/js/main.4c715c1c.js.map"
   },
   "entrypoints": [
     "static/css/main.0824f115.css",
-    "static/js/main.59430554.js"
+    "static/js/main.4c715c1c.js"
   ]
 }
