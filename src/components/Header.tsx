@@ -22,20 +22,56 @@ const HeaderContent = styled.div`
   align-items: center;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+const IdentitySection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    display: contents;
+  }
+`;
+
+const TitleBar = styled.div`
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    display: block;
+    width: auto;
+  }
+`;
+
+const TitleBarSpacer = styled.div`
+  @media (min-width: 992px) {
+    display: none;
   }
 `;
 
 const Title = styled(motion.h1)`
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 650;
   margin: 0;
   text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  justify-self: center;
+  grid-column: 2;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     text-align: left;
+    grid-column: auto;
   }
 `;
 
@@ -47,7 +83,7 @@ const ContactInfo = styled.div`
   font-size: 0.9rem;
   opacity: 0.9;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     flex-direction: row;
     gap: 20px;
   }
@@ -65,12 +101,16 @@ const ContactInfo = styled.div`
 `;
 
 const Navigation = styled.nav`
-  display: flex;
+  display: none;
   gap: 0;
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
   padding: 4px;
   backdrop-filter: blur(10px);
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
 `;
 
 const NavLink = styled(Link)<{ $isActive: boolean }>`
@@ -94,30 +134,44 @@ const NavLink = styled(Link)<{ $isActive: boolean }>`
 `;
 
 const MobileMenuButton = styled.button`
-  display: none;
-  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
   font-size: 1.5rem;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  
-  @media (max-width: 767px) {
-    display: block;
+  flex-shrink: 0;
+  transition: var(--transition);
+  grid-column: 3;
+  justify-self: end;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (min-width: 992px) {
+    display: none;
   }
 `;
 
-const MobileNav = styled(motion.div)`
-  display: none;
-  
-  @media (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius);
-    padding: 8px;
-    backdrop-filter: blur(10px);
+const MobileNav = styled(motion.nav)`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 8px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+
+  @media (min-width: 992px) {
+    display: none;
   }
 `;
 
@@ -140,21 +194,35 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Title
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Andrea Leang
-        </Title>
-        
-        <ContactInfo>
-          <span>Cambridge, MA 02139</span>
-          <a href="mailto:andrealeang@gmail.com">andrealeang@gmail.com</a>
-          <a href="https://linkedin.com/in/andrea-leang/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-        </ContactInfo>
+        <IdentitySection>
+          <TitleBar>
+            <TitleBarSpacer aria-hidden="true" />
+            <Title
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Andrea Leang
+            </Title>
+
+            <MobileMenuButton
+              type="button"
+              aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? '✕' : '☰'}
+            </MobileMenuButton>
+          </TitleBar>
+
+          <ContactInfo>
+            <span>Cambridge, MA 02139</span>
+            <a href="mailto:andrealeang@gmail.com">andrealeang@gmail.com</a>
+            <a href="https://linkedin.com/in/andrea-leang/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </ContactInfo>
+        </IdentitySection>
 
         <Navigation>
           {navItems.map((item) => (
@@ -168,28 +236,24 @@ const Header: React.FC = () => {
           ))}
         </Navigation>
 
-        <MobileMenuButton onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          ☰
-        </MobileMenuButton>
+        {isMobileMenuOpen && (
+          <MobileNav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                $isActive={location.pathname === item.path}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </MobileNav>
+        )}
       </HeaderContent>
-
-      {isMobileMenuOpen && (
-        <MobileNav
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-        >
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              $isActive={location.pathname === item.path}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </MobileNav>
-      )}
     </HeaderContainer>
   );
 };

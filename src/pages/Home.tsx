@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import resumePdf from '../files/Andrea_Leang_Resume.pdf';
 // import { FaDownload } from 'react-icons/fa';
+
+const RESUME_FILENAME = 'Andrea_Leang_Resume.pdf';
 
 const HomeContainer = styled.div`
   min-height: calc(100vh - 200px);
@@ -104,8 +107,8 @@ const Home: React.FC = () => {
         </Description>
         
         <DownloadButton
-          href="/MIT_Masters_Andrea_Leang_Resume.pdf"
-          download
+          href={resumePdf}
+          download={RESUME_FILENAME}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import fencingStarLogo from '../files/Fencing_Star_Logo.png';
 // import { FaBriefcase, FaTrophy, FaUsers, FaDollarSign } from 'react-icons/fa';
 
 const ExperienceContainer = styled.div`
@@ -67,16 +68,11 @@ const ExperienceHeader = styled.div`
   margin-bottom: 15px;
 `;
 
-const ExperienceIcon = styled.div`
+const CompanyLogoIcon = styled.img`
   width: 50px;
   height: 50px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
+  flex-shrink: 0;
+  object-fit: contain;
 `;
 
 const ExperienceTitle = styled.h4`
@@ -143,8 +139,7 @@ const Experience: React.FC = () => {
           <ExperienceList>
             <ExperienceItem>
               <ExperienceHeader>
-                <ExperienceIcon>
-                </ExperienceIcon>
+                <CompanyLogoIcon src={fencingStarLogo} alt="Fencing Star logo" />
                 <ExperienceLink
                     href="https://fencingstar.us" 
                     target="_blank" 
@@ -184,7 +179,7 @@ const Experience: React.FC = () => {
                 
               </ExperienceHeader>
               <ExperienceDescription>
-              Febuary 2024 - Present
+              Febuary 2024 - May 2026
               </ExperienceDescription>
               <ExperienceBullet>
               - Undergraduate TA for 6.1200 (6.042) Mathematics for Computer Science, Graduate TA for 6.1210 (6.006) Introduction to Algorithms
@@ -253,11 +248,11 @@ const Experience: React.FC = () => {
           <ExperienceList>
           <ExperienceItem>
               <ExperienceHeader>
-                <ExperienceTitle>MIT Varsity Fencing (September 2021 - Present)</ExperienceTitle>
+                <ExperienceTitle>MIT Varsity Fencing (September 2021 - May 2026)</ExperienceTitle>
                 
               </ExperienceHeader>
               <ExperienceDescription>
-              <Highlight>Women's Epee Squad Leader ('22 - '25), 4-time NCAA Regionals Qualifier, Pan-American Finalist, Volunteer Assistant Coach ('25 - Present)</Highlight>
+              <Highlight>Women's Epee Squad Leader ('22 - '25), 4-time NCAA Regionals Qualifier, Pan-American Finalist, Volunteer Assistant Coach ('25 - '26)</Highlight>
               </ExperienceDescription>
               <ExperienceBullet>
               - Led team through competitions and practices 10 hrs/wk against 21 NCAA teams

@@ -248,7 +248,7 @@ const Contact: React.FC = () => {
     } catch (error) {
       setMessage({
         type: 'error',
-        text: 'There was an error preparing your message. Please try again or contact me directly at akleang@mit.edu'
+        text: 'There was an error preparing your message. Please try again or contact me directly at andrealeang@gmail.com'
       });
     } finally {
       setIsSubmitting(false);
@@ -290,7 +290,7 @@ const Contact: React.FC = () => {
               </ContactIcon>
               <ContactDetails>
                 <ContactLabel>Email</ContactLabel>
-                <ContactValue>akleang@mit.edu</ContactValue>
+                <ContactValue>andrealeang@gmail.com</ContactValue>
               </ContactDetails>
             </ContactItem>
             
